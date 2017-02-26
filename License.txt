@@ -1,0 +1,31 @@
+License
+Simple Extended License
+
+By subscribing and purchasing an individual resource (“item” or “file”), or downloading a free resource you are being granted a license to use these files for specific uses under certain conditions. Ownership remains with S2 Digital, and you are required to abide by the following licensing terms.
+
+PAID LICENSE
+
+If you have paid for this download then you are bound by the paid license agreement. The paid license grants you an exclusive and non-transferrable right to use and incorporate these files in your personal or commercial projects under the following conditions:
+
+Single Use Applications
+
+A single use application is when you are using our resources to design something for yourself or one other person/company. Any item that will be distributed or sold to multiple people is NOT a single use application. For example: designing a site for a client is a single-use application whereas designing a theme for multiple people is a multi-use application (see below).
+
+No attribution is required.
+The final product MAY NOT be distributed, sold more than once, or used by multiple people. If the product is distributed or used multiple times, please follow multi-use guidelines below.
+Multiple Use Applications (Extended License)
+
+Most paid items come with our extended (multiple-use) license. A multiple-use application is when you intend the final product to be distributed, sold, or used by multiple people/companies. This includes applications, themes, web services, or other items that will be re-sold or used by more than one person or company.
+
+No attribution is required, but it is highly recommended (please and thank you!)
+You MAY NOT resell or redistribute our items by themselves: they must be a part of a larger product or application that is sold on its own merits. Any items that are included must be a small part of the greater whole.
+You MAY NOT include more than 30% of a single resource in any multi-use item. For example, if you are selling an app that uses icons, you may not include more than 30 icons out of a set of 100 icons.
+Complete unedited themes, website templates, and print items ARE NOT ELIGIBLE for multi-use applications (you MAY NOT resell or redistribute these items).
+You MAY NOT include any of the original source files in the item for resale or redistribution. For example, you may not include the PSD from a website that was created using that kit. You may not include source files in any usage application.
+FREE LICENSE
+
+If you have downloaded this file without paying for an individual item or a subscription, you are governed by the free license. The free license grants you the exclusive right to use and incorporate these files in your personal or commercial projects under the following conditions:
+
+All uses of these free items must contain an attribution link back to this website, or the specific download page of this resource.
+You may use this resource or adaptations of this resource in commercial or other projects for single-application or multi-use applications, however if the application is multi-use (i.e. a commercial app or theme) then the attribution must be clearly visible on all pages or areas where the resource is used.
+You MAY NOT distribute or resell this resource, or its derivatives, and you may not upload this resource to other websites. All sharing of this resource must be done using a link to this websites download page.

@@ -1,0 +1,990 @@
+
+
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*!
+ * Z Menu Maker
+ * Visual menu maker (Pure CSS, jQuery, Simple menu, Drop Down menu, Mega menu)
+ * http://nkdev.info
+ * @author nK
+ * @version 1.2.3
+ * Copyright 2015.
+ */
+
+/*
+*
+*   GENERAL COMPONENT
+*   default zetta menu component
+*
+*/
+
+.zetta-menu1
+{
+    z-index: 999;
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    width: 100%;
+}
+
+.zetta-menu1.zm-fixed
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.zetta-menu1:before,
+.zetta-menu1 ul,
+.zetta-menu1 li,
+.zetta-menu1 div,
+.zetta-menu1 a,
+.zetta-menu1 label,
+.zetta-menu1 input,
+.zetta-menu1 textarea,
+.zetta-menu1 button
+{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.zetta-menu1 a
+{
+    cursor: pointer;
+}
+
+.zetta-menu1 a,
+.zetta-menu1 a:visited
+{
+    color: inherit;
+}
+
+.zetta-menu1 > ul:after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.zetta-menu1 > ul .zm-single-icon
+{
+    letter-spacing: 0;
+}
+
+.zetta-menu1 > ul,
+.zetta-menu1 > ul > li,
+.zetta-menu1 > ul > li > div > ul li,
+.zetta-menu1 > ul > li > a,
+.zetta-menu1 > ul > li > div > ul li > a
+{
+    -webkit-transition: color 300ms, background-color 300ms, box-shadow 300ms, text-shadow 300ms, width 300ms, height 300ms, border-radius 300ms, margin 300ms, padding 300ms;
+    transition: color 300ms, background-color 300ms, box-shadow 300ms, text-shadow 300ms, width 300ms, height 300ms, border-radius 300ms, margin 300ms, padding 300ms;
+}
+
+/*
+*
+*   RESPONSIVE COMPONENT
+*   default zetta menu component
+*
+*/
+
+.zetta-menu1 > input,
+.zetta-menu1 > ul .zm-switch
+{
+    display: none;
+}
+
+.zetta-menu1 > ul .zm-switch a
+{
+    text-align: right;
+}
+
+.zetta-menu1 > ul .zm-switch label
+{
+    padding-right: 32.5px;
+}
+
+/*
+*
+*   MENU COMPONENT
+*   default zetta menu component
+*
+*/
+
+.zetta-menu1
+{
+    background: #212022;
+    padding: 0;
+    margin: 0;
+}
+
+.zetta-menu1 > ul
+{
+    text-align: right;
+}
+
+/*
+*
+*   MENU ITEM COMPONENT
+*   default zetta menu component
+*
+*/
+
+.zetta-menu1 > ul > li
+{
+    vertical-align: top;
+    display: inline-block;
+    float: left;
+}
+
+.zetta-menu1 > ul > li + li
+{
+    margin-left: 10px;
+}
+
+.zetta-menu1 > ul > li.zm-right-item
+{
+    margin-right: 0;
+    float: none;
+}
+
+.zetta-menu1 > ul > li > a,
+.zetta-menu1 > ul > li > a:visited
+{
+    color: #949494;
+    padding: 0px 10px 0px 10px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+}
+
+.zetta-menu1 > ul > li:hover
+{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.zetta-menu1 > ul > li:hover > a,
+.zetta-menu1 > ul > li:hover > a:visited
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.zetta-menu1 > ul > li.zm-active,
+.zetta-menu1 > ul > li.zm-open
+{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.zetta-menu1 > ul > li.zm-active > a,
+.zetta-menu1 > ul > li.zm-open > a,
+.zetta-menu1 > ul > li.zm-active > a:visited,
+.zetta-menu1 > ul > li.zm-open > a:visited
+{
+    color: #ffffff;
+}
+
+.zetta-menu1 > ul > li.zm-img
+{
+    font-size: 0;
+}
+
+.zetta-menu1 > ul > li.zm-img a
+{
+    padding: 0;
+    position: relative;
+}
+
+.zetta-menu1 > ul > li.zm-img img
+{
+    max-height: 100%;
+    vertical-align: middle;
+    border: none;
+}
+
+.zetta-menu1 > ul li
+{
+    position: relative;
+    cursor: default;
+}
+
+.zetta-menu1 > ul li > a
+{
+    text-decoration: none;
+    display: block;
+}
+
+.zetta-menu1 > ul li > div
+{
+    z-index: 1;
+}
+
+/*
+*
+*   SUB COMPONENT
+*   default zetta menu component
+*
+*/
+
+.zetta-menu1 > ul > li > div
+{
+    margin-top: 18px;
+}
+
+.zetta-menu1 > ul > li > div:after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 18px;
+    top: -18px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div
+{
+    margin-left: 18px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div:after,
+.zetta-menu1 > ul > li > div > ul li > div.zm-sub-left:after
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 18px;
+    left: -18px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div.zm-sub-left
+{
+    margin-left: auto;
+    margin-right: 18px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div.zm-sub-left:after
+{
+    left: auto;
+    right: -18px;
+}
+
+.zetta-menu1 > ul > li > div:before
+{
+    content: '';
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #302e30;
+    left: 11px;
+    top: -10px;
+}
+
+.zetta-menu1 > ul > li > div.zm-right-align:before
+{
+    left: auto;
+    right: 11px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div:before
+{
+    content: '';
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #302e30;
+    left: -10px;
+    top: 11px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div.zm-sub-left:before
+{
+    left: auto;
+    border-left: 10px solid #302e30;
+    border-right: none;
+    right: -10px;
+}
+
+.zetta-menu1 > ul > li.zm-right-item.zm-search > div:before
+{
+    left: auto;
+    right: 11px;
+}
+
+.zetta-menu1 > ul > li > div,
+.zetta-menu1 > ul > li > div > ul li > div
+{
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background: #302e30;
+    box-shadow: 0px 0px 20px 0px rgba(33, 32, 34, 0.5);
+    border-radius: 8px 8px 8px 8px;
+    padding: 15px 5px 15px 5px;
+    width: 200px;
+}
+
+.zetta-menu1 > ul > li > div
+{
+    text-align: left;
+    top: 100%;
+    left: 0;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div
+{
+    left: 100%;
+    top: 0;
+}
+
+.zetta-menu1 > ul > li > div > ul li.zm-sub-bottom > div
+{
+    left: auto;
+    top: auto;
+}
+
+.zetta-menu1 > ul > li > div > ul li > div.zm-sub-left
+{
+    left: auto;
+    right: 100%;
+    top: 0;
+}
+
+.zetta-menu1 > ul > li.zm-open > div,
+.zetta-menu1 > ul > li > div > ul li.zm-open > div,
+.zetta-menu1.zm-css > ul > li:hover > div,
+.zetta-menu1.zm-css > ul > li > div > ul li:hover > div
+{
+    display: table;
+    z-index: 2;
+}
+
+.zetta-menu1 > ul > li.zm-open.zm-effect-off > div,
+.zetta-menu1 > ul > li > div > ul li.zm-open.zm-effect-off > div
+{
+    z-index: 1;
+}
+
+.zetta-menu1 > ul > li.zm-open.zm-effect-on > div,
+.zetta-menu1 > ul > li > div > ul li.zm-open.zm-effect-on > div
+{
+    z-index: 3;
+}
+
+.zetta-menu1 > ul > li > div > ul
+{
+    position: relative;
+    display: table-cell;
+}
+
+.zetta-menu1 > ul > li > div.zm-right-align,
+.zetta-menu1.zm-css > ul > li > div.zm-right-align
+{
+    left: auto;
+    top: auto;
+    right: 0;
+}
+
+/*
+*
+*   SUB ITEM COMPONENT
+*   default zetta menu component
+*
+*/
+
+.zetta-menu1 > ul > li > div > ul li
+{
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: null;
+}
+
+.zetta-menu1 > ul > li > div > ul li + li
+{
+    margin-top: 3px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > a .zm-caret
+{
+    letter-spacing: 0;
+    float: right;
+    line-height: 35px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > a,
+.zetta-menu1 > ul > li > div > ul li > a:visited
+{
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0px 10px 0px 10px;
+    min-height: 35px;
+    line-height: 35px;
+}
+
+.zetta-menu1 > ul > li > div > ul li:hover
+{
+    background: rgba(64, 76, 133, 0);
+}
+
+.zetta-menu1 > ul > li > div > ul li:hover > a,
+.zetta-menu1 > ul > li > div > ul li:hover > a:visited
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.zetta-menu1 > ul > li > div > ul li.zm-active,
+.zetta-menu1 > ul > li > div > ul li.zm-open
+{
+    background: rgba(64, 76, 133, 0);
+}
+
+.zetta-menu1 > ul > li > div > ul li.zm-active > a,
+.zetta-menu1 > ul > li > div > ul li.zm-open > a,
+.zetta-menu1 > ul > li > div > ul li.zm-active > a:visited,
+.zetta-menu1 > ul > li > div > ul li.zm-open > a:visited
+{
+    color: #ffffff;
+}
+
+/*
+*
+*   CONTENT COMPONENT
+*   default zetta menu component
+*
+*/
+
+.zetta-menu1 > ul > li.zm-full.zm-open > div,
+.zetta-menu1.zm-css > ul > li.zm-full:hover > div
+{
+    display: block;
+}
+
+.zetta-menu1 > ul > li.zm-full
+{
+    position: static;
+}
+
+.zetta-menu1 > ul > li.zm-full > div
+{
+    left: 0;
+    width: 100%;
+}
+
+.zetta-menu1 > ul h1,
+.zetta-menu1 > ul h2,
+.zetta-menu1 > ul h3,
+.zetta-menu1 > ul h4,
+.zetta-menu1 > ul h5,
+.zetta-menu1 > ul h6
+{
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.zetta-menu1 > ul .zm-row
+{
+    display: block;
+}
+
+.zetta-menu1 > ul .zm-row:before,
+.zetta-menu1 > ul .zm-row:after
+{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col
+{
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    padding: 5px;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.zm-col-styled > div
+{
+    border-radius: 5px;
+    padding: 13px;
+    background: #212022;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-12
+{
+    width: 100%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-11
+{
+    width: 91.66666667%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-10
+{
+    width: 83.33333333%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-9
+{
+    width: 75%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-8
+{
+    width: 66.66666667%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-7
+{
+    width: 58.33333333%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-6
+{
+    width: 50%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-5
+{
+    width: 41.66666667%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-4
+{
+    width: 33.33333333%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-3
+{
+    width: 25%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-2
+{
+    width: 16.66666667%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col.c-1
+{
+    width: 8.33333333%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col ul
+{
+    display: block;
+    position: relative;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col ul li a,
+.zetta-menu1 > ul .zm-row .zm-col ul li a:visited
+{
+    text-align: center;
+    line-height: 1;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col ul li:hover
+{
+    background-color: transparent;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col ul li:hover a,
+.zetta-menu1 > ul .zm-row .zm-col ul li:hover a:visited
+{
+    text-decoration: underline;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col img
+{
+    width: 100%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col img:hover
+{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col .zm-video
+{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col .zm-video > iframe
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col input,
+.zetta-menu1 > ul .zm-row .zm-col textarea
+{
+    width: 100%;
+    margin-top: 10px;
+    font: inherit;
+    resize: none;
+}
+
+.zetta-menu1 > ul .zm-row .zm-col input.zm-button,
+.zetta-menu1 > ul .zm-row .zm-col .zm-button
+{
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/*
+*
+*   ICONS EXTENSION
+*   default zetta menu extension
+*
+*/
+
+.zetta-menu1 > ul > li > a > .zm-icon
+{
+    margin-right: 8px;
+}
+
+.zetta-menu1 > ul > li > a > .zm-caret i
+{
+    margin-left: 8px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > a > .zm-icon
+{
+    margin-left: 8px;
+}
+
+.zetta-menu1 > ul > li > div > ul li > a > .zm-caret i
+{
+    margin-left: 8px;
+}
+
+/*
+*
+*   EFFECTS EXTENSION
+*   default zetta menu extension
+*
+*   Animations from Animate.css lib
+*   http://daneden.github.io/animate.css/
+*
+*/
+
+.zetta-menu1 > ul > li.zm-effect-on > div,
+.zetta-menu1 > ul > li > div > ul li.zm-effect-on > div,
+.zetta-menu1.zm-css > ul > li:hover > div,
+.zetta-menu1.zm-css > ul > li > div > ul li:hover > div
+{
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+    -webkit-animation-name: fade;
+    animation-name: fade;
+}
+
+.zetta-menu1 > ul > li > div,
+.zetta-menu1 > ul > li > div > ul li > div
+{
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.zetta-menu1 > ul > li.zm-effect-off > div,
+.zetta-menu1 > ul > li > div > ul li.zm-effect-off > div
+{
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+@-webkit-keyframes fade{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomIn{
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  0.001% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes zoomIn{
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  0.001% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+/*
+*
+*   SEARCH EXTENSION
+*   default zetta menu extension
+*
+*/
+
+.zetta-menu1 > ul > .zm-search.zm-open > div,
+.zetta-menu1.zm-css > ul > .zm-search:hover > div
+{
+    display: block;
+}
+
+.zetta-menu1 > ul .zm-search
+{
+    position: relative;
+}
+
+.zetta-menu1 > ul .zm-search a > .zm-icon
+{
+    margin: 0;
+}
+
+.zetta-menu1 > ul .zm-search input::-webkit-input-placeholder
+{
+    line-height: normal;
+}
+
+.zetta-menu1 > ul .zm-search.zm-right-item > div
+{
+    left: auto;
+    right: 0;
+}
+
+.zetta-menu1 > ul .zm-search > div
+{
+    height: 50px;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 250px;
+}
+
+.zetta-menu1 > ul .zm-search > div form
+{
+    position: relative;
+}
+
+.zetta-menu1 > ul .zm-search > div input,
+.zetta-menu1 > ul .zm-search > div button
+{
+    font-size: inherit;
+    font-family: inherit;
+    -webkit-appearance: none;
+    height: 50px;
+}
+
+.zetta-menu1 > ul .zm-search > div ::-webkit-input-placeholder
+{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.zetta-menu1 > ul .zm-search > div ::-moz-placeholder
+{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.zetta-menu1 > ul .zm-search > div :-ms-input-placeholder
+{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.zetta-menu1 > ul .zm-search > div ::placeholder
+{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.zetta-menu1 > ul .zm-search > div .zm-search-place
+{
+    padding-left: 20px;
+    padding-right: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    background: #212022;
+    width: 100%;
+}
+
+.zetta-menu1 > ul .zm-search > div .zm-search-button
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    line-height: 1;
+    width: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    background: #302f32;
+}
+
+/*
+*
+*   USER STYLES
+*   default zetta menu component
+*
+*/
+
+/*
+*
+* ZETTA RESPONSIVE
+*
+*/
+
+@media screen and (max-width: 768px)
+{
+/* RESPONSIVE COMPONENT */
+    .zetta-menu1.zm-fixed
+    {
+        overflow-y: scroll;
+        max-height: 100%;
+    }
+    .zetta-menu1 > ul > .zm-switch
+    {
+        display: block;
+    }
+    .zetta-menu1 > ul > .zm-switch,
+  .zetta-menu1 > ul > .zm-switch > a
+    {
+        margin: 0;
+        padding: 0;
+    }
+    .zetta-menu1 > ul > .zm-switch label
+    {
+        display: block;
+        cursor: pointer;
+    }
+    .zetta-menu1 > input:checked + ul
+    {
+        padding-top: 65px;
+    }
+    .zetta-menu1 > input:checked + ul > li
+    {
+        display: block;
+    }
+    .zetta-menu1 > input:checked + ul > li.zm-switch
+    {
+        position: absolute;
+        top: 0;
+    }
+/* MENU ITEM RESPONSIVE COMPONENT */
+    .zetta-menu1 > ul
+    {
+        text-align: left;
+    }
+    .zetta-menu1 > ul > li
+    {
+        display: none;
+        float: none;
+        width: 100%;
+    }
+    .zetta-menu1 > ul > li > a .zm-caret
+    {
+        float: right;
+    }
+    .zetta-menu1 > ul > li + li
+    {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .zetta-menu1 > ul > li.zm-full
+    {
+        position: relative;
+    }
+    .zetta-menu1 > ul > li.zm-logo
+    {
+        display: block;
+    }
+    .zetta-menu1 > ul > li.zm-logo img
+    {
+        position: relative;
+        z-index: 1;
+    }
+/* SUB RESPONSIVE COMPONENT */
+    .zetta-menu1 > ul > li.zm-open > div,
+  .zetta-menu1 > ul > li > div > ul li.zm-open > div,
+  .zetta-menu1.zm-css > ul > li:hover > div,
+  .zetta-menu1.zm-css > ul > li > div > ul li:hover > div
+    {
+        display: block;
+        width: auto !important;
+        left: 20px !important;
+        top: 100% !important;
+        right: 0 !important;
+        margin-right: 0;
+    }
+    .zetta-menu1 > ul > li.zm-open > div,
+  .zetta-menu1 > ul > li > div > ul li.zm-open > div,
+  .zetta-menu1.zm-css > ul > li:hover > div,
+  .zetta-menu1.zm-css > ul > li > div > ul li:hover > div,
+  .zetta-menu1 > ul > li.zm-open > div > ul,
+  .zetta-menu1 > ul > li > div > ul li.zm-open > div > ul,
+  .zetta-menu1.zm-css > ul > li:hover > div > ul,
+  .zetta-menu1.zm-css > ul > li > div > ul li:hover > div > ul
+    {
+        display: block;
+    }
+/* CONTENT RESPONSIVE COMPONENT */
+    .zetta-menu1 > ul .zm-row .zm-col
+    {
+        display: block;
+        width: 100% !important;
+        float: none;
+    }
+/* ICONS RESPONSIVE COMPONENT */
+/* SEARCH RESPONSIVE EXTENSION */
+    .zetta-menu1 > ul > li.zm-search.zm-open > div,
+  .zetta-menu1 > ul > li > div > ul li.zm-search.zm-open > div,
+  .zetta-menu1.zm-css > ul > li.zm-search:hover > div,
+  .zetta-menu1.zm-css > ul > li > div > ul li.zm-search:hover > div
+    {
+        display: block;
+        width: 100%;
+    }
+}
+
